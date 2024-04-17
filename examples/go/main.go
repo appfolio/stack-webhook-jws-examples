@@ -55,8 +55,6 @@ func main() {
 			return
 		}
 
-		fmt.Println("message", message)
-
 		_, err = jws.Verify([]byte(message), jws.WithKeySet(set))
 
 		if err != nil {
