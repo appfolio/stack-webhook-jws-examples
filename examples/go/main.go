@@ -44,7 +44,7 @@ func main() {
 			return
 		}
 
-		encodedPayload := base64.URLEncoding.EncodeToString(body)
+		encodedPayload := base64.RawURLEncoding.EncodeToString(body)
 
 		message := fmt.Sprintf("%s.%s.%s", encodedHeader, encodedPayload, encodedSignature)
 
@@ -54,6 +54,8 @@ func main() {
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
+
+		fmt.Println("message", message)
 
 		_, err = jws.Verify([]byte(message), jws.WithKeySet(set))
 

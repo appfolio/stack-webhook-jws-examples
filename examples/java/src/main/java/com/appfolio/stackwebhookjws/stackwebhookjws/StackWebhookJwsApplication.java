@@ -42,7 +42,7 @@ public class StackWebhookJwsApplication {
     jws.setAlgorithmConstraints(new AlgorithmConstraints(
         ConstraintType.PERMIT, AlgorithmIdentifiers.RSA_PSS_USING_SHA256));
 
-	String encodedPayload = Base64Url.encode(body);
+	String encodedPayload = Base64Url.encode(body).replace("=", "");
 	String[] signatureComponents = signature.split("\\.");
 	if (signatureComponents.length != 3) {
 		logger.error("Invalid signature: {}", signature);

@@ -16,7 +16,7 @@ async function verifySignature(req) {
     // @important! NodeJS converts the header names to lowercase, so we need to use the lowercase version
     const [encodedHeader, encodedSignature] = req.headers['x-jws-signature'].split('..');
 
-    const encodedPayload = req.body.toString('base64url');
+    const encodedPayload = req.body.toString('base64url').replaceAll('=', '');
 
     const message = `${encodedHeader}.${encodedPayload}.${encodedSignature}`;
 
