@@ -24,7 +24,7 @@ class WebhookController < ApplicationController
       return
     end
 
-    encoded_payload = Base64.urlsafe_encode64(request.raw_post)
+    encoded_payload = Base64.urlsafe_encode64(request.raw_post).gsub(/=+$/, '')
     message = "#{encoded_header}.#{encoded_payload}.#{encoded_signature}"
 
     begin

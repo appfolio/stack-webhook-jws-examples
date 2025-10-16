@@ -44,7 +44,7 @@ func main() {
 			return
 		}
 
-		encodedPayload := base64.URLEncoding.EncodeToString(body)
+		encodedPayload := base64.RawURLEncoding.EncodeToString(body)
 
 		message := fmt.Sprintf("%s.%s.%s", encodedHeader, encodedPayload, encodedSignature)
 

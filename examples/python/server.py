@@ -18,7 +18,8 @@ def webhook():
         signature = request.headers['x-jws-signature']
         encoded_header, encoded_signature = signature.split('..')
         decoded_signature = base64.urlsafe_b64decode(encoded_signature + "===")
-        encoded_payload = base64.urlsafe_b64encode(request.data).decode("utf-8")
+        encoded_payload = base64.urlsafe_b64encode(request.get_data()).decode("utf-8")
+        encoded_payload = encoded_payload.replace('=', '')
 
         jws_header_json = json.loads(base64.urlsafe_b64decode(encoded_header + "===").decode("utf-8"))
         signing_key = jwks_client.get_jwk_set()[jws_header_json['kid']].key
