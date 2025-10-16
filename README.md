@@ -1,3 +1,16 @@
+> # ❗️ Deprecation Notice ❗️ ![No Maintenance Intended](badge.svg)
+> ```stack-webhook-jws-examples``` contains example code for AppFolio Stack Webhooks, for use by 3rd-party AppFolio Stack Partner companies. As our partner-facing Developer Space app hosts all our partner-relevant Stack documentation, we are therefore deprecating and archiving this `stack-webhook-jws-examples` repository.
+
+> ## Can I still use this code?
+> **Security vulnerabilities may exist in the project, or its dependencies.** If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Visit the Security tab to view existing known vulnerabilities flagged by Dependabot due to not-updated dependencies.
+> If you find these samples, patterns, and convenience functions useful, we encourage you to take the code under your wing, improve them, and use it on your own. Even though AppFolio will no longer be supporting this content going forward, you may use the code at your convenience, external to the package.
+
+> ## What will happen next?
+> 
+> AppFolio will archive the `stack-webhook-jws-examples` repo and make no further edits / modifications / examples / improvements to it.
+
+---
+
 # AppFolio Webhooks
 AppFolio provides support for webhooks through the API. Webhooks are HTTP-based callback functions that allow your app to receive real-time updates about events that occur in the AppFolio system. This repository contains example code for various languages demonstrating how to verify the signature of a webhook event notification sent by AppFolio.
 
