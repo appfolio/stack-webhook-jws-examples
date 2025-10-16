@@ -1,5 +1,5 @@
 > # ❗️ Deprecation Notice ❗️ ![No Maintenance Intended](badge.svg)
-> ```stack-webhook-jws-examples``` contains example code for AppFolio Stack Webhooks, for use by 3rd-party AppFolio Stack Partner companies. As our partner-facing Developer Space app hosts all our partner-relevant Stack documentation, we are therefore deprecating and archiving this `stack-webhook-jws-examples` repository.
+> ```stack-webhook-jws-examples``` contains example code for AppFolio Stack Webhooks, for use by 3rd-party AppFolio Stack Partner companies. We are deprecating this repo, but the example code is still available to draw from.
 
 > ## Can I still use this code?
 > **Security vulnerabilities may exist in the project, or its dependencies.** If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Visit the Security tab to view existing known vulnerabilities flagged by Dependabot due to not-updated dependencies.
