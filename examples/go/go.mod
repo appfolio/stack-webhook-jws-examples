@@ -2,8 +2,6 @@ module github.com/appfolio/stack-webhook-jws-examples
 
 go 1.23.0
 
-require github.com/lestrrat-go/jwx/v2 v2.0.20
-
 require github.com/lestrrat-go/jwx/v2 v2.0.21
 
 require (
